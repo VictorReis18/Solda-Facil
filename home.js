@@ -46,7 +46,7 @@ const modalError = document.getElementById('modalError');
 let actionToConfirm = null; // Guarda a ação pendente ('upload' ou 'delete')
 let filesToUpload = null;   // Guarda os arquivos para upload pendente
 
-// ✅ Correção de Bug: Controle para evitar condição de corrida ao navegar rapidamente
+// Controle para evitar condição de corrida ao navegar rapidamente
 // Incrementa a cada chamada de `carregarConteudo` para invalidar renderizações antigas.
 let loadingVersion = 0;
 
@@ -70,7 +70,7 @@ onAuthStateChanged(auth, async (user) => {
     carregarConteudo(); //chama a funcao para exibir os arquvios do usuario
 });
 
-// ✅ Otimização: IntersectionObserver para Lazy Loading das miniaturas
+// IntersectionObserver para Lazy Loading das miniaturas
 const thumbnailObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
