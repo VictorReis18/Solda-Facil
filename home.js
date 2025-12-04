@@ -15,13 +15,7 @@ import {
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
 const firebaseConfig = {
-   apiKey: "AIzaSyCfHezkpGYdgvt_6euD1drBZ4fb39aSNr8", // Substitua pela sua chave de API
-  authDomain: "soldafacil-3ea8f.firebaseapp.com",
-  projectId: "soldafacil-3ea8f",
-  storageBucket: "soldafacil-3ea8f.firebasestorage.app",
-  messagingSenderId: "933275857351",
-  appId: "1:933275857351:web:341ed83cb8de3e626d29e2",
-  measurementId: "G-WL5YHJCBBJ"
+  //Dados do servidor
 };
 
 const app = initializeApp(firebaseConfig);
