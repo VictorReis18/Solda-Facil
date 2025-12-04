@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Solda Fácil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="voltarBtn" style="display: none;">Voltar</button>
+        <h2>Painel de Arquivos</h2>
+        <p id="uid"></p>
+
+        <h3>Pasta atual:</h3>
+        <p id="pastaAtual"></p>
+
+        <!-- Lista única para pastas e arquivos -->
+        <ul id="listaConteudo"></ul>
+
+        <div class="botoes-container">
+            <div class="upload-container">
+                <button id="toggleUploadBtn">Adicionar Arquivo</button>
+                <div class="upload-section" style="display: none;">
+                    <input type="file" id="arquivo" multiple>
+                </div>
+            </div>
+            <button id="logoutBtn">Sair</button>
+        </div>
+
+        <button id="deleteBtn" class="delete-button" style="display: none;">🗑️</button>
+
+        <p id="msg" style="color: green;"></p>
+
+        <!-- Modal de Confirmação de Senha -->
+        <div id="passwordModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h3>Confirmar Exclusão</h3>
+                <p>Para sua segurança, por favor, digite sua senha para confirmar a exclusão dos arquivos.</p>
+                <input type="password" id="passwordConfirm" placeholder="Sua senha">
+                <p id="modalError" style="color: red;"></p>
+                <button id="confirmDeleteBtn">Confirmar</button>
+                <button id="cancelDeleteBtn">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Biblioteca para renderizar miniaturas de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script type="module" src="home.js"></script>
+</body>
+</html>
